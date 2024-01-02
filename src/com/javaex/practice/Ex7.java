@@ -39,14 +39,15 @@ wonArray[9] = 1;
 				wonArray[9] = 1; 
 		
 				int money;
-				int count=0 ;
+				//int count=0 ;
 				for(int i=0;i<wonArray.length;i++){
 					money = wonArray[i];
 					
 					while(true) {
-						if(cash>money) {
-							cash= cash-money;
-							System.out.println(cash);
+						if(0>cash-(money*i)) {
+							cash= cash-(money*--i);
+							
+							System.out.println(money+"원:"+--i+"개");
 							break;
 						}
 						
